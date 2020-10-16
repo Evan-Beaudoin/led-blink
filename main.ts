@@ -1,3 +1,4 @@
+basic.showIcon(IconNames.Yes)
 // Created by: Evan
 // Created on: Oct. 2020
 // 
@@ -6,9 +7,8 @@
 // 
 // 
 basic.forever(function () {
-    basic.showIcon(IconNames.Yes)
-    pins.digitalWritePin(DigitalPin.P1, 1)
-    basic.pause(1000)
-    pins.digitalWritePin(DigitalPin.P1, 0)
-    basic.pause(1000)
+    pins.digitalWritePin(DigitalPin.P1, randint(0, 1))
+    pins.digitalWritePin(DigitalPin.P2, randint(0, 1))
+    pins.digitalWritePin(DigitalPin.P8, randint(0, 1))
+    basic.pause(100)
 })
